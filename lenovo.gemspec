@@ -8,6 +8,6 @@ Gem::Specification.new do |s|
   s.email       = 'cquadros@lenovo.com,arun, alankalapall@lenovo.com'
   s.files       = ["lib/cnos-rbapi.rb"] + Dir["lib/cnos-rbapi/*.rb"]
   s.homepage    = 'http://rubygems.org/gems/lenovo-cnos-rbapi'
-  s.licenses     = ['Copyright (C) 2017 Lenovo, Inc','Apache-2.0']
+  s.licenses     = ['Copyright (C) 2017 Lenovo, Inc','BSD-3-Clause']
   s.extra_rdoc_files = ['README.md', 'LICENSE.md', 'vlagTest.rb', 'vlanTest.rb']
 end
