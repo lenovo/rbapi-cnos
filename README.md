@@ -4,6 +4,7 @@
 1. Overview
 2. Requirements
 3. CNOS Ruby APIs
+
    3.1 Using Ruby APIs
 4. License
 
