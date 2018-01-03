@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Coleen Quadros, Arun Lankapalli"]
   s.email       = 'cquadros@lenovo.com,arun, alankalapall@lenovo.com'
   s.files       = ["lib/cnos-rbapi.rb"] + Dir["lib/cnos-rbapi/*.rb"]
-  s.homepage    = 'http://rubygems.org/gems/lenovo-rpapi'
+  s.homepage    = 'http://rubygems.org/gems/lenovo-rbapi'
   s.licenses     = ['Copyright (C) 2017 Lenovo, Inc','BSD-3-Clause']
   s.extra_rdoc_files = ['README.md', 'LICENSE.md', 'vlagTest.rb', 'vlanTest.rb']
 end
