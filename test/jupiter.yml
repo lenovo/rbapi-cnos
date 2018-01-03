@@ -1,0 +1,6 @@
+transport : 'http'
+port : '8090'
+ip : '10.240.177.121'
+user : 'admin'
+password : 'admin'
+image : 'G8296-CNOS-10.6.0.59.img'

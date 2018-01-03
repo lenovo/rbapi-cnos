@@ -1,0 +1,6 @@
+transport : 'https'
+port : '443'
+ip : '10.240.177.241'
+user : 'admin'
+password : 'admin'
+image : 'NE1032-CNOS-10.6.0.59.img'
