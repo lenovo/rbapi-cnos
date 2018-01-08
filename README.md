@@ -34,11 +34,14 @@ that interface with the Lenovo CNOS switches.
 3.1.1 Switch Configutation file
 This configuration file is used to define the configuration options or model for 
 switches (switch.yml or any xxx.yml)
-
-transport : 'http' #transport (HTTP/HTTPs)
-port : '8090' #HTTP(s) port number (8090 - HTTP, 443 - HTTPs)
-ip : 'switch ip address' #Switch IP address
-user : '<username>' #Switch Credentials
+#transport (HTTP/HTTPs)
+transport : 'http' 
+#HTTP(s) port number (8090 - HTTP, 443 - HTTPs)
+port : '8090' 
+#Switch IP address
+ip : 'switch ip address' 
+#Switch Credentials
+user : '<username>' 
 password : '<password>' 
 
 3.1.2 Creating connection and sending configurations
@@ -55,10 +58,14 @@ conn = Connect.new(param)
 where param is a dictionary formed either from the config file or hardcoded 
 with the following key value pairs 
 
-transport => 'http' #transport (HTTP/HTTPs)
-port => '8090' #HTTP(s) port number (8090 - HTTP, 443 - HTTPs)
-ip => 'switch ip address' #Switch IP address
-user => '<username>' #Switch Credentials
+#transport (HTTP/HTTPs)
+transport => 'http' 
+#HTTP(s) port number (8090 - HTTP, 443 - HTTPs)
+port => '8090' 
+#Switch IP address
+ip => 'switch ip address' 
+#Switch Credentials
+user => '<username>' 
 password => '<password>'
  
 #Use VLAN APIs to retrieve VLAN information
