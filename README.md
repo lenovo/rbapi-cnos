@@ -31,9 +31,9 @@ port : '8090' #HTTP(s) port number (8090 - HTTP, 443 - HTTPs)
 
 ip : 'switch ip address' #Switch IP address
 
-user : '<username>' # Switch Credentials
+user : 'username ' # Switch Credentials
 
-password : '<password>' 
+password : 'password' 
 
 #### Creating connection and sending configurations
 Below demonstrates a basic connection using the API. 
@@ -54,16 +54,14 @@ port => '8090'  #HTTP(s) port number (8090 - HTTP, 443 - HTTPs)
 
 ip => 'switch ip address' #Switch IP address 
 
-user => '<username>'  #Switch Credentials
+user => 'username'  #Switch Credentials
 
-password => '<password>'
+password => 'password'
   
-# Use VLAN APIs to retrieve VLAN information
-Vlan.get_all_vlan(conn)
+Vlan.get_all_vlan(conn) #Use VLAN APIs to retrieve VLAN information
 
-# Use VLAN APIs to create/update and delete VLANs
 params = {"vlan_name" => "test", "vlan_id" => 10, "admin_state" => "up"}
-resp = Vlan.create_vlan(conn, params)
+resp = Vlan.create_vlan(conn, params) #Use VLAN APIs to create/update and delete VLANs
 
 resp = Vlan.get_vlan_prop(conn, 10)
 
