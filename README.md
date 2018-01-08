@@ -39,7 +39,9 @@ password : 'password'
 Below demonstrates a basic connection using the API. For more examples, please see the examples folder.
 
 #import the libraries
+
 require 'cnos-rbapi/connect'
+
 require 'cnos-rbapi/vlan'
 
 conn = Connect.new(param) #create connection to the node using the configuration file
