@@ -1,14 +1,6 @@
 # Lenovo CNOS Ruby API Library
 
-#### Table of Contents
-1. Overview
-2. Requirements
-3. CNOS Ruby APIs
-
-   3.1 Using Ruby APIs
-4. License
-
-1. Overview
+## Overview
 The Ruby Client for CNOS API provides a native Ruby implementation for programming
 Lenovo CNOS network devices using Ruby.  The Ruby client provides the ability to
 build native applications in Ruby that can communicate with CNOS remotely over 
@@ -21,23 +13,25 @@ The library is freely provided to the open source community for building applica
 using CNOS REST API infrastrcuture. Support is provided as best effort through
 Github iusses.
 
-2. Requirements
+## Requirements
 * Lenovo CNOS 10.4 or later
 * Ruby 2.2.3 or later
 
-3. CNOS Ruby APIs
+## CNOS Ruby APIs
 The CNOS Ruby Client was designed to be easy to use and develop plugins or tools
 that interface with the Lenovo CNOS switches.
 
-3.1 Using the API
-3.1.1 Switch Configutation file
+### Using the API
+#### Switch Configutation file
 This configuration file is used to define the configuration options or model for switches (switch.yml or any xxx.yml)
+
 transport : 'http' #transport (HTTP/HTTPs)
 port : '8090' #HTTP(s) port number (8090 - HTTP, 443 - HTTPs)
 ip : 'switch ip address' #Switch IP address
 user : '<username>' # Switch Credentials
 password : '<password>' 
-3.1.2 Creating connection and sending configurations
+
+#### Creating connection and sending configurations
 Below demonstrates a basic connection using the API. 
 For more examples, please see the examples folder.
 #import the libraries
@@ -50,14 +44,10 @@ conn = Connect.new(param)
 where param is a dictionary formed either from the config file or hardcoded 
 with the following key value pairs 
 
-#transport (HTTP/HTTPs)
-transport => 'http' 
-#HTTP(s) port number (8090 - HTTP, 443 - HTTPs)
-port => '8090' 
-#Switch IP address
-ip => 'switch ip address' 
-#Switch Credentials
-user => '<username>' 
+transport => 'http' #transport (HTTP/HTTPs) 
+port => '8090'  #HTTP(s) port number (8090 - HTTP, 443 - HTTPs)
+ip => 'switch ip address' #Switch IP address 
+user => '<username>'  #Switch Credentials
 password => '<password>'
  
 #Use VLAN APIs to retrieve VLAN information
