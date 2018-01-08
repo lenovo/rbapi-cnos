@@ -36,14 +36,13 @@ user : 'username ' # Switch Credentials
 password : 'password' 
 
 #### Creating connection and sending configurations
-Below demonstrates a basic connection using the API. 
-For more examples, please see the examples folder.
+Below demonstrates a basic connection using the API. For more examples, please see the examples folder.
+
 #import the libraries
 require 'cnos-rbapi/connect'
 require 'cnos-rbapi/vlan'
 
-#create connection to the node using the configuration file
-conn = Connect.new(param)
+conn = Connect.new(param) #create connection to the node using the configuration file
 
 where param is a dictionary formed either from the config file or hardcoded 
 with the following key value pairs 
@@ -61,11 +60,13 @@ password => 'password'
 Vlan.get_all_vlan(conn) #Use VLAN APIs to retrieve VLAN information
 
 params = {"vlan_name" => "test", "vlan_id" => 10, "admin_state" => "up"}
+
 resp = Vlan.create_vlan(conn, params) #Use VLAN APIs to create/update and delete VLANs
 
 resp = Vlan.get_vlan_prop(conn, 10)
 
 params = {"vlan_name" => "test", "admin_state" => "up"}
+
 resp = Vlan.update_vlan(conn, 10, params)
 
 Vlan.delete_vlan(conn, 10)
