@@ -44,7 +44,8 @@ require 'cnos-rbapi/connect'
 
 require 'cnos-rbapi/vlan'
 
-conn = Connect.new(param) #create connection to the node using the configuration file
+##### create connection to the node using the configuration file
+conn = Connect.new(param) 
 
 where param is a dictionary formed either from the config file or hardcoded 
 with the following key value pairs 
