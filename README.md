@@ -59,11 +59,12 @@ user => 'username'  #Switch Credentials
 
 password => 'password'
   
-Vlan.get_all_vlan(conn) #Use VLAN APIs to retrieve VLAN information
-
+##### Use VLAN APIs to retrieve VLAN information
+Vlan.get_all_vlan(conn)
 params = {"vlan_name" => "test", "vlan_id" => 10, "admin_state" => "up"}
 
-resp = Vlan.create_vlan(conn, params) #Use VLAN APIs to create/update and delete VLANs
+##### Use VLAN APIs to create/update and delete VLANs
+resp = Vlan.create_vlan(conn, params) 
 
 resp = Vlan.get_vlan_prop(conn, 10)
 
