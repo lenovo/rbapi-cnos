@@ -26,9 +26,13 @@ that interface with the Lenovo CNOS switches.
 This configuration file is used to define the configuration options or model for switches (switch.yml or any xxx.yml)
 
 transport : 'http' #transport (HTTP/HTTPs)
+
 port : '8090' #HTTP(s) port number (8090 - HTTP, 443 - HTTPs)
+
 ip : 'switch ip address' #Switch IP address
+
 user : '<username>' # Switch Credentials
+
 password : '<password>' 
 
 #### Creating connection and sending configurations
@@ -45,15 +49,19 @@ where param is a dictionary formed either from the config file or hardcoded
 with the following key value pairs 
 
 transport => 'http' #transport (HTTP/HTTPs) 
+
 port => '8090'  #HTTP(s) port number (8090 - HTTP, 443 - HTTPs)
+
 ip => 'switch ip address' #Switch IP address 
+
 user => '<username>'  #Switch Credentials
+
 password => '<password>'
- 
-#Use VLAN APIs to retrieve VLAN information
+  
+# Use VLAN APIs to retrieve VLAN information
 Vlan.get_all_vlan(conn)
 
-#Use VLAN APIs to create/update and delete VLANs
+# Use VLAN APIs to create/update and delete VLANs
 params = {"vlan_name" => "test", "vlan_id" => 10, "admin_state" => "up"}
 resp = Vlan.create_vlan(conn, params)
 
