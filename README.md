@@ -17,7 +17,7 @@ a HTTP/S transport (off-box).
 The Ruby API implemenation also provides an API layer for building native Ruby
 objects that allow for configuration and management of Lenovo CNOS switches. 
 
-The libray is freely provided to the open source community for building applications 
+The library is freely provided to the open source community for building applications 
 using CNOS REST API infrastrcuture. Support is provided as best effort through
 Github iusses.
 
@@ -33,17 +33,17 @@ that interface with the Lenovo CNOS switches.
 
 3.1.1 Switch Configutation file
 This configuration file is used to define the configuration options or model for switches (switch.yml or any xxx.yml)
-
+---
 transport : 'http' #transport (HTTP/HTTPs)
 port : '8090' #HTTP(s) port number (8090 - HTTP, 443 - HTTPs)
 ip : 'switch ip address' #Switch IP address
 user : '<username>' # Switch Credentials
 password : '<password>' 
-
+---
 3.1.2 Creating connection and sending configurations
 Below demonstrates a basic connection using the API. 
 For more examples, please see the examples folder.
-
+---
 #import the libraries
 require 'cnos-rbapi/connect'
 require 'cnos-rbapi/vlan'
