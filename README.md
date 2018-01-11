@@ -24,7 +24,8 @@ that interface with the Lenovo CNOS switches.
 ### Using the API
 #### Switch Configutation file
 This configuration file is used to define the configuration options or model for switches (switch.yml or any xxx.yml)
----yml
+
+---yaml
 transport : 'http' # transport (HTTP/HTTPs)
 port : '8090' # HTTP(s) port number (8090 - HTTP, 443 - HTTPs)
 ip : 'switch ip address' # Switch IP address
