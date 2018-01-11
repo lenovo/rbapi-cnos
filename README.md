@@ -22,7 +22,7 @@ The CNOS Ruby Client was designed to be easy to use and develop plugins or tools
 that interface with the Lenovo CNOS switches.
 
 ### Using the API
-#### Switch Configutation file
+#### Switch Configuration file
 This configuration file is used to define the configuration options or model for switches (switch.yml or any xxx.yml)
 ```yaml
 transport : 'http' # transport (HTTP/HTTPs)
