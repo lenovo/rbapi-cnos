@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   #s.date        = '10-16-2017'
   s.summary     = "Library Implementation for REST API's"
   s.description = "Lib for REST API's using Ruby"
-  s.authors     = ["Coleen Quadros, Arun Lankapalli"]
+  s.authors     = ["Coleen Quadros, Arun Lankalapalli"]
   s.email       = 'cquadros@lenovo.com,arun, alankalapall@lenovo.com'
   s.files       = ["lib/cnos-rbapi.rb"] + Dir["lib/cnos-rbapi/*.rb"]
   s.homepage    = 'http://rubygems.org/gems/lenovo-rbapi'
