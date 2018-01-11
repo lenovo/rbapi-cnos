@@ -22,30 +22,20 @@ The CNOS Ruby Client was designed to be easy to use and develop plugins or tools
 that interface with the Lenovo CNOS switches.
 
 ### Using the API
-#### Switch Configutation file
+#### Switch Configuration file
 This configuration file is used to define the configuration options or model for switches (switch.yml or any xxx.yml)
-
-##### transport (HTTP/HTTPs)
-transport : 'http' 
-
-##### HTTP(s) port number (8090 - HTTP, 443 - HTTPs)
-port : '8090' 
-
-##### Switch IP address
-ip : 'switch ip address' 
-
-##### Switch Credentials
-user : 'username' 
-
-password : 'password' 
-
+```yaml
+transport : 'http' # transport (HTTP/HTTPs)
+port : '8090' # HTTP(s) port number (8090 - HTTP, 443 - HTTPs)
+ip : 'switch ip address' # Switch IP address
+user : 'username'  # Switch Credentials
+password : 'password' #switch credentials 
+```
 #### Creating connection and sending configurations
 Below demonstrates a basic connection using the API. For more examples, please see the examples folder.
-
+```ruby
 #import the libraries
-
 require 'cnos-rbapi/connect'
-
 require 'cnos-rbapi/vlan'
 
 ##### create connection to the node using the configuration file
@@ -54,22 +44,14 @@ conn = Connect.new(param)
 where param is a dictionary formed either from the config file or hardcoded 
 with the following key value pairs 
 
-##### transport (HTTP/HTTPs) 
-transport => 'http' 
-
-##### HTTP(s) port number (8090 - HTTP, 443 - HTTPs)
-port => '8090'  
-
-##### Switch IP address 
-ip => 'switch ip address'
-
-##### Switch Credentials
-user => 'username'  
-password => 'password'
+transport => 'http' # transport (HTTP/HTTPs) 
+port => '8090' # HTTP(s) port number (8090 - HTTP, 443 - HTTPs)
+ip => 'switch ip address' # Switch IP address 
+user => 'username' #Switch Credentials
+password => 'password' #Switch Credentials
   
 ##### Use VLAN APIs to retrieve VLAN information
 Vlan.get_all_vlan(conn)
-
 params = {"vlan_name" => "test", "vlan_id" => 10, "admin_state" => "up"}
 
 ##### Use VLAN APIs to create/update and delete VLANs
@@ -82,3 +64,4 @@ params = {"vlan_name" => "test", "admin_state" => "up"}
 resp = Vlan.update_vlan(conn, 10, params)
 
 Vlan.delete_vlan(conn, 10)
+```
